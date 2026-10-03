@@ -12,9 +12,11 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY =
-            "EduSphereSmartStudentInformationSystem2026SecretKey";
-
+    private final String secretKey =
+        System.getenv().getOrDefault(
+                "JWT_SECRET",
+                "EduSphereSmartStudentInformationSystem2026SecretKey"
+        );
     private static final long EXPIRATION_TIME =
             1000 * 60 * 60; // 1 hour
 
