@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fc;
+    color: #14213d;
+}
+
+.navbar {
+    height: 75px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.brand h2 {
+    font-size: 20px;
+}
+
+.brand span {
+    font-size: 12px;
+    color: #718096;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 55px auto;
+}
+
+.page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #718096;
+}
+
+.add-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+.proficiency {
+    display: inline-block;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.progress {
+    height: 7px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin: 18px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+.skill-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.skill-actions button {
+    border: none;
+    padding: 8px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.delete-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+#message {
+    margin-bottom: 20px;
+}
+
+.success {
+    background: #ecfdf5;
+    color: #047857;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.error {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 480px;
+
+    background: white;
+    border-radius: 15px;
+
+    padding: 30px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    color: #64748b;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 7px;
+
+    font-weight: 700;
+}
+
+form input,
+form select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.save-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   SKILL MODAL FIX
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex !important;
+}
+
+.modal-content {
+    background: #ffffff;
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #111;
+}

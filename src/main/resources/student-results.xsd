@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://edusphere.com/student-results"
+           xmlns:tns="http://edusphere.com/student-results"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetStudentResultRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="studentId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetStudentResultResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="studentId" type="xs:long"/>
+                <xs:element name="studentName" type="xs:string"/>
+                <xs:element name="semester" type="xs:string"/>
+                <xs:element name="result" type="xs:string"/>
+                <xs:element name="percentage" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

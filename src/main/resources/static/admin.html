@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSphere | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="/admin.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        <span class="brand-icon">E</span>
+        <span>EduSphere</span>
+    </div>
+
+    <div class="admin-title">
+        Admin Dashboard
+    </div>
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+</header>
+
+
+<main class="dashboard">
+
+    <!-- WELCOME -->
+
+    <section class="welcome-section">
+
+        <div>
+            <p class="eyebrow">ADMINISTRATION</p>
+
+            <h1>Student Management</h1>
+
+            <p class="subtitle">
+                Manage student accounts, profiles and access.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">👥</div>
+
+            <div>
+                <p>Total Students</p>
+                <h2 id="totalStudents">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">🏫</div>
+
+            <div>
+                <p>Departments</p>
+                <h2 id="totalDepartments">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">🎓</div>
+
+            <div>
+                <p>Active Students</p>
+                <h2 id="activeStudents">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">🔒</div>
+
+            <div>
+                <p>Inactive Students</p>
+                <h2 id="inactiveStudents">0</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYTICS -->
+
+    <section class="analytics-section">
+
+        <div class="analytics-card">
+
+            <div class="analytics-card-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        ANALYTICS
+                    </p>
+
+                    <h2>
+                        Student Analytics
+                    </h2>
+
+                    <p>
+                        Overview of student distribution and account status.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+                <!-- DEPARTMENT ANALYTICS -->
+
+                <div class="analytics-box">
+
+                    <h3>
+                        Department Distribution
+                    </h3>
+
+                    <div id="departmentAnalytics">
+
+                        <p class="analytics-loading">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- YEAR ANALYTICS -->
+
+                <div class="analytics-box">
+
+                    <h3>
+                        Year Distribution
+                    </h3>
+
+                    <div id="yearAnalytics">
+
+                        <p class="analytics-loading">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDENT DIRECTORY -->
+
+    <section class="student-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    Student Directory
+                </h2>
+
+                <p>
+                    View and manage registered students.
+                </p>
+
+            </div>
+
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search students..."
+                oninput="searchStudents()"
+            >
+
+        </div>
+
+
+        <div
+            id="errorMessage"
+            class="error-message">
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Registration No.
+                        </th>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Department
+                        </th>
+
+                        <th>
+                            Year
+                        </th>
+
+                        <th>
+                            Section
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="studentTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="8"
+                            class="loading">
+
+                            Loading students...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- PROFILE MODAL -->
+
+<div
+    id="profileModal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-btn"
+            onclick="closeProfile()">
+
+            ×
+
+        </button>
+
+
+        <div id="profileContent"></div>
+
+    </div>
+
+</div>
+
+
+<script src="/admin.js"></script>
+
+</body>
+</html>

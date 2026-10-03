@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Achievements | EduSphere</title>
+
+    <link rel="stylesheet" href="/achievements.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+        <div class="brand-logo">E</div>
+
+        <div>
+            <h2>EduSphere</h2>
+            <span>Student Career Platform</span>
+        </div>
+    </div>
+
+    <a href="/index.html" class="back-link">
+        ← Back to Profile
+    </a>
+
+</nav>
+
+
+<main class="container">
+
+    <div class="page-header">
+
+        <div>
+            <p class="eyebrow">CAREER HIGHLIGHTS</p>
+
+            <h1>My Achievements</h1>
+
+            <p class="subtitle">
+                Showcase your accomplishments, competitions,
+                hackathons and other milestones.
+            </p>
+        </div>
+
+        <button
+            class="add-btn"
+            onclick="openAddAchievement()">
+            + Add Achievement
+        </button>
+
+    </div>
+
+
+    <div id="message"></div>
+
+
+    <section
+        id="achievementsContainer"
+        class="achievements-grid">
+    </section>
+
+</main>
+
+
+<!-- Achievement Modal -->
+
+<div id="achievementModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                Add Achievement
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeAchievementModal()">
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="achievementForm">
+
+            <input
+                type="hidden"
+                id="achievementId"
+            >
+
+
+            <label for="title">
+                Achievement Title
+            </label>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="e.g. University Hackathon Participant"
+                required
+            >
+
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                placeholder="Describe your achievement..."
+                required>
+            </textarea>
+
+
+            <label for="achievementDate">
+                Achievement Date
+            </label>
+
+            <input
+                type="date"
+                id="achievementDate"
+                required
+            >
+
+
+            <label for="achievementType">
+                Achievement Type
+            </label>
+
+            <select
+                id="achievementType"
+                required>
+
+                <option value="">
+                    Select type
+                </option>
+
+                <option value="Hackathon">
+                    Hackathon
+                </option>
+
+                <option value="Competition">
+                    Competition
+                </option>
+
+                <option value="Academic">
+                    Academic
+                </option>
+
+                <option value="Award">
+                    Award
+                </option>
+
+                <option value="Leadership">
+                    Leadership
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="proofUrl">
+                Proof URL
+            </label>
+
+            <input
+                type="url"
+                id="proofUrl"
+                placeholder="https://..."
+            >
+
+
+            <button
+                type="submit"
+                class="save-btn">
+                Save Achievement
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="/achievements.js"></script>
+
+</body>
+</html>

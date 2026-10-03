@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSphere | Student Signup</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="signup-page">
+
+    <div class="signup-container">
+
+        <!-- BRAND -->
+
+        <div class="signup-brand">
+
+            <div class="brand-icon">
+                E
+            </div>
+
+            <div>
+                <h2>EduSphere</h2>
+                <p>Smart Student Information System</p>
+            </div>
+
+        </div>
+
+
+        <!-- HEADING -->
+
+        <div class="signup-heading">
+
+            <p class="eyebrow">
+                STUDENT REGISTRATION
+            </p>
+
+            <h1>Create your account</h1>
+
+            <p>
+                Build your academic and professional profile
+                on EduSphere.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="signupForm">
+
+            <div class="form-grid">
+
+                <!-- ROLL NUMBER -->
+
+                <div class="form-group">
+
+                    <label for="rollNumber">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        placeholder="24B11AI010"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="student@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select id="department" required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="AIML">
+                            Artificial Intelligence & Machine Learning
+                        </option>
+
+                        <option value="CSE">
+                            Computer Science Engineering
+                        </option>
+
+                        <option value="ECE">
+                            Electronics & Communication Engineering
+                        </option>
+
+                        <option value="EEE">
+                            Electrical & Electronics Engineering
+                        </option>
+
+                        <option value="MECH">
+                            Mechanical Engineering
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- YEAR -->
+
+                <div class="form-group">
+
+                    <label for="year">
+                        Academic Year
+                    </label>
+
+                    <select id="year" required>
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option value="1">
+                            Year 1
+                        </option>
+
+                        <option value="2">
+                            Year 2
+                        </option>
+
+                        <option value="3">
+                            Year 3
+                        </option>
+
+                        <option value="4">
+                            Year 4
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SECTION -->
+
+                <div class="form-group">
+
+                    <label for="section">
+                        Section
+                    </label>
+
+                    <select id="section" required>
+
+                        <option value="">
+                            Select Section
+                        </option>
+
+                        <option value="A">
+                            Section A
+                        </option>
+
+                        <option value="B">
+                            Section B
+                        </option>
+
+                        <option value="C">
+                            Section C
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="message"
+                class="message">
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                id="signupButton">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+
+        <!-- LOGIN -->
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="/login.html">
+                Sign in
+            </a>
+
+        </p>
+
+
+        <!-- FOOTER -->
+
+        <p class="footer-text">
+            © 2026 EduSphere • Smart Student Information System
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="signup.js"></script>
+
+</body>
+
+</html>

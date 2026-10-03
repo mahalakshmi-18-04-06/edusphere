@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSphere | Edit Profile</title>
+
+    <link rel="stylesheet" href="/edit-profile.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        <span class="brand-icon">E</span>
+        <span>EduSphere</span>
+    </div>
+
+    <a href="/index.html" class="back-link">
+        ← Back to Profile
+    </a>
+
+</header>
+
+
+<main class="page-container">
+
+    <section class="profile-card">
+
+        <div class="page-heading">
+
+            <p class="eyebrow">
+                STUDENT PROFILE
+            </p>
+
+            <h1>
+                Edit Career Profile
+            </h1>
+
+            <p>
+                Keep your professional links and profile information updated.
+            </p>
+
+        </div>
+
+
+        <form id="profileForm">
+
+            <div class="form-group">
+
+                <label for="profileImageUrl">
+                    Profile Image URL
+                </label>
+
+                <input
+                    type="url"
+                    id="profileImageUrl"
+                    placeholder="https://example.com/profile.jpg"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="githubUrl">
+                    GitHub
+                </label>
+
+                <input
+                    type="url"
+                    id="githubUrl"
+                    placeholder="https://github.com/username"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="linkedinUrl">
+                    LinkedIn
+                </label>
+
+                <input
+                    type="url"
+                    id="linkedinUrl"
+                    placeholder="https://linkedin.com/in/username"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="portfolioUrl">
+                    Portfolio
+                </label>
+
+                <input
+                    type="url"
+                    id="portfolioUrl"
+                    placeholder="https://yourportfolio.com"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="resumeUrl">
+                    Resume
+                </label>
+
+                <input
+                    type="url"
+                    id="resumeUrl"
+                    placeholder="https://your-resume-link.com"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="leetcodeUrl">
+                    LeetCode
+                </label>
+
+                <input
+                    type="url"
+                    id="leetcodeUrl"
+                    placeholder="https://leetcode.com/u/username/"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="codechefUrl">
+                    CodeChef
+                </label>
+
+                <input
+                    type="url"
+                    id="codechefUrl"
+                    placeholder="https://www.codechef.com/users/username"
+                >
+
+            </div>
+
+
+            <div
+                id="message"
+                class="message">
+            </div>
+
+
+            <button
+                type="submit"
+                class="save-btn">
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script src="/edit-profile.js"></script>
+
+</body>
+
+</html>

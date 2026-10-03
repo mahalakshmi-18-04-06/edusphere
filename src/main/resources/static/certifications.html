@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Certifications | EduSphere</title>
+
+    <link rel="stylesheet" href="/certifications.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+        <div class="brand-logo">E</div>
+
+        <div>
+            <h2>EduSphere</h2>
+            <span>Student Career Platform</span>
+        </div>
+    </div>
+
+    <a href="/index.html" class="back-link">
+        ← Back to Profile
+    </a>
+
+</nav>
+
+<main class="container">
+
+    <div class="page-header">
+
+        <div>
+            <p class="eyebrow">PROFESSIONAL DEVELOPMENT</p>
+
+            <h1>My Certifications</h1>
+
+            <p class="subtitle">
+                Showcase your professional certifications and credentials.
+            </p>
+        </div>
+
+        <button
+            class="add-btn"
+            onclick="openAddCertification()">
+            + Add Certification
+        </button>
+
+    </div>
+
+    <div id="message"></div>
+
+    <section
+        id="certificationsContainer"
+        class="certifications-grid">
+    </section>
+
+</main>
+
+
+<!-- Certification Modal -->
+
+<div id="certificationModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                Add Certification
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeCertificationModal()">
+                ×
+            </button>
+
+        </div>
+
+        <form id="certificationForm">
+
+            <input
+                type="hidden"
+                id="certificationId"
+            >
+
+            <label for="title">
+                Certification Title
+            </label>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="e.g. Machine Learning Specialization"
+                required
+            >
+
+            <label for="issuingOrganization">
+                Issuing Organization
+            </label>
+
+            <input
+                type="text"
+                id="issuingOrganization"
+                placeholder="e.g. Coursera"
+                required
+            >
+
+            <label for="issueDate">
+                Issue Date
+            </label>
+
+            <input
+                type="date"
+                id="issueDate"
+                required
+            >
+
+            <label for="credentialUrl">
+                Credential URL
+            </label>
+
+            <input
+                type="url"
+                id="credentialUrl"
+                placeholder="https://..."
+            >
+
+            <label for="certificateImageUrl">
+                Certificate Image URL
+            </label>
+
+            <input
+                type="url"
+                id="certificateImageUrl"
+                placeholder="https://..."
+            >
+
+            <button
+                type="submit"
+                class="save-btn">
+                Save Certification
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/certifications.js"></script>
+
+</body>
+</html>

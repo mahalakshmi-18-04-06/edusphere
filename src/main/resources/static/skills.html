@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Skills | EduSphere</title>
+
+    <link rel="stylesheet" href="/skills.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="brand">
+        <div class="brand-logo">E</div>
+        <div>
+            <h2>EduSphere</h2>
+            <span>Student Career Platform</span>
+        </div>
+    </div>
+
+    <a href="/index.html" class="back-link">
+        ← Back to Profile
+    </a>
+</nav>
+
+<main class="container">
+
+    <div class="page-header">
+        <div>
+            <p class="eyebrow">TECHNICAL PROFILE</p>
+            <h1>My Skills</h1>
+            <p class="subtitle">
+                Manage your technical skills and proficiency levels.
+            </p>
+        </div>
+
+        <button class="add-btn" onclick="openAddSkill()">
+            + Add Skill
+        </button>
+    </div>
+
+    <div id="message"></div>
+
+    <section id="skillsContainer" class="skills-grid"></section>
+
+</main>
+
+<!-- Skill Modal -->
+<div id="skillModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2 id="modalTitle">Add Skill</h2>
+
+            <button
+                class="close-btn"
+                onclick="closeSkillModal()">
+                ×
+            </button>
+        </div>
+
+        <form id="skillForm">
+
+            <input type="hidden" id="skillId">
+
+            <label for="skillName">
+                Skill Name
+            </label>
+
+            <input
+                type="text"
+                id="skillName"
+                placeholder="e.g. Java"
+                required
+            >
+
+            <label for="proficiency">
+                Proficiency
+            </label>
+
+            <select id="proficiency" required>
+                <option value="">Select proficiency</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Expert">Expert</option>
+            </select>
+
+            <button type="submit" class="save-btn">
+                Save Skill
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/skills.js"></script>
+
+</body>
+</html>

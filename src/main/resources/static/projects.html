@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Projects | EduSphere</title>
+
+    <link rel="stylesheet" href="/projects.css">
+
+</head>
+
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            E
+        </div>
+
+        <div>
+
+            <h2>EduSphere</h2>
+
+            <span>
+                Student Career Platform
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/index.html#projects"
+        class="back-link"
+    >
+        ← Back to Profile
+    </a>
+
+</nav>
+
+
+
+<main class="container">
+
+    <div class="page-header">
+
+        <div>
+
+            <p class="eyebrow">
+                PROJECT PORTFOLIO
+            </p>
+
+            <h1>
+                My Projects
+            </h1>
+
+            <p class="subtitle">
+                Manage your projects and showcase your work.
+            </p>
+
+        </div>
+
+
+        <button
+            class="add-btn"
+            onclick="openAddProject()"
+        >
+            + Add Project
+        </button>
+
+    </div>
+
+
+    <div id="message"></div>
+
+
+    <section
+        id="projectsContainer"
+        class="projects-grid"
+    >
+
+        <p class="empty-message">
+            Loading projects...
+        </p>
+
+    </section>
+
+</main>
+
+
+
+<!-- PROJECT MODAL -->
+
+<div
+    id="projectModal"
+    class="modal"
+>
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                Add Project
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeProjectModal()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="projectForm">
+
+            <input
+                type="hidden"
+                id="projectId"
+            >
+
+
+            <!-- PROJECT TITLE -->
+
+            <label for="projectTitle">
+                Project Title
+            </label>
+
+            <input
+                type="text"
+                id="projectTitle"
+                placeholder="e.g. Customer Churn Prediction"
+                required
+            >
+
+
+            <!-- DESCRIPTION -->
+
+            <label for="projectDescription">
+                Description
+            </label>
+
+            <textarea
+                id="projectDescription"
+                rows="5"
+                placeholder="Describe your project..."
+                required
+            ></textarea>
+
+
+            <!-- TECHNOLOGIES -->
+
+            <label for="projectTechnologies">
+                Technologies
+            </label>
+
+            <input
+                type="text"
+                id="projectTechnologies"
+                placeholder="e.g. Python, Flask, Machine Learning"
+            >
+
+
+            <!-- GITHUB -->
+
+            <label for="githubUrl">
+                GitHub URL
+            </label>
+
+            <input
+                type="url"
+                id="githubUrl"
+                placeholder="https://github.com/..."
+            >
+
+
+            <!-- LIVE DEMO -->
+
+            <label for="liveDemoUrl">
+                Live Demo URL
+            </label>
+
+            <input
+                type="url"
+                id="liveDemoUrl"
+                placeholder="https://..."
+            >
+
+
+            <button
+                type="submit"
+                class="save-btn"
+            >
+                Save Project
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="/projects.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSphere | Student Dashboard</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Edu<span>Sphere</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/index.html">Profile</a>
+
+            <a href="/projects.html">Projects</a>
+
+            <a href="/skills.html">Skills</a>
+
+            <a href="/certifications.html">
+                Certifications
+            </a>
+
+            <a href="/achievements.html">
+                Achievements
+            </a>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome">
+
+            <div>
+
+                <p class="eyebrow">
+                    STUDENT DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome,
+                    <span id="studentName">
+                        Student
+                    </span>
+                    👋
+                </h1>
+
+                <p id="studentInfo">
+                    Loading student information...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- Projects -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💼
+                </div>
+
+                <div>
+
+                    <p>
+                        Projects
+                    </p>
+
+                    <h2 id="projectCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Skills -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🛠️
+                </div>
+
+                <div>
+
+                    <p>
+                        Skills
+                    </p>
+
+                    <h2 id="skillCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Certifications -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📜
+                </div>
+
+                <div>
+
+                    <p>
+                        Certifications
+                    </p>
+
+                    <h2 id="certificationCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Achievements -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <p>
+                        Achievements
+                    </p>
+
+                    <h2 id="achievementCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DETAILS ================= -->
+
+        <section class="details-grid">
+
+
+            <!-- Academic Information -->
+
+            <div class="panel">
+
+                <h2>
+                    Academic Information
+                </h2>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Registration Number
+                    </span>
+
+                    <strong id="registrationNumber">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Department
+                    </span>
+
+                    <strong id="department">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Year
+                    </span>
+
+                    <strong id="year">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Section
+                    </span>
+
+                    <strong id="section">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Actions -->
+
+            <div class="panel quick-panel">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+
+                <a href="/edit-profile.html">
+                    Edit Profile
+                </a>
+
+
+                <a href="/projects.html">
+                    Manage Projects
+                </a>
+
+
+                <a href="/skills.html">
+                    Manage Skills
+                </a>
+
+
+                <a href="/certifications.html">
+                    Manage Certifications
+                </a>
+
+
+                <a href="/achievements.html">
+                    Manage Achievements
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFILE COMPLETION ================= -->
+
+        <section class="completion-panel">
+
+            <div class="completion-header">
+
+                <div>
+
+                    <p class="completion-label">
+                        PROFILE STRENGTH
+                    </p>
+
+                    <h2>
+                        Profile Completion
+                    </h2>
+
+                    <p>
+                        Complete your profile to showcase
+                        your academic and career information.
+                    </p>
+
+                </div>
+
+
+                <div class="completion-percentage">
+
+                    <span id="profileCompletion">
+                        0
+                    </span>
+
+                    %
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="completionProgress"
+                    class="progress-fill"
+                    style="width: 0%;">
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/dashboard.js"></script>
+
+</body>
+
+</html>

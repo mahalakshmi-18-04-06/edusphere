@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSphere | Login</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <div class="auth-left">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+
+            <div>
+                <h2>EduSphere</h2>
+                <span>Smart Student Information System</span>
+            </div>
+        </div>
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                STUDENT CAREER PLATFORM
+            </p>
+
+            <h1>
+                Your academic journey,
+                <span>all in one place.</span>
+            </h1>
+
+            <p>
+                Manage your academic profile, projects, skills,
+                certifications and career information through
+                one intelligent platform.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Academic Profile Management</p>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Projects & Technical Skills</p>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Certifications & Achievements</p>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Professional Career Profiles</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="left-footer">
+            © 2026 EduSphere
+        </div>
+
+    </div>
+
+
+    <div class="auth-right">
+
+        <div class="auth-card">
+
+            <div class="mobile-brand">
+                <div class="brand-icon">E</div>
+                <h2>EduSphere</h2>
+            </div>
+
+            <div class="auth-heading">
+
+                <p class="auth-label">
+                    WELCOME BACK
+                </p>
+
+                <h1>Sign in to your account</h1>
+
+                <p>
+                    Enter your roll number and password
+                    to continue.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="rollNumber">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        name="rollNumber"
+                        placeholder="Enter your roll number"
+                        required
+                        autocomplete="username"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="label-row">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                    </div>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                            autocomplete="current-password"
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password">
+
+                            Show
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="errorMessage"
+                    class="message error-message">
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="auth-button">
+
+                    <span id="buttonText">
+                        Sign In
+                    </span>
+
+                    <span
+                        id="buttonLoader"
+                        class="loader">
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="/signup.html">
+                    Create an account
+                </a>
+
+            </p>
+
+
+            <div class="demo-info">
+
+                <strong>Demo Accounts</strong>
+
+                <p>
+                    Student: <b>24B11AI001</b>
+                </p>
+
+                <p>
+                    Admin: <b>admin</b>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="login.js"></script>
+
+</body>
+</html>
